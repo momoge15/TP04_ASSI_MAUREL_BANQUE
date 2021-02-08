@@ -31,28 +31,45 @@ public class CompteBancaire implements Serializable {
        public CompteBancaire() {
     }
 
-    public CompteBancaire(final String accountNumber, final String firstname, final String lastname, final double balance) {
+    public CompteBancaire(final String accountNumber, final String firstName, final String lastName, final double balance) {
         this.accountNumber = accountNumber;
         this.lastName = lastName;
         this.firstName = firstName;
         this.balance = balance;
     }
 
-    public String getFirstname() {
+    public String getFirstName() {
         return firstName;
     }
 
-    public void setFirstname(String firstname) {
-        this.firstName = firstname;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
-    
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
     public String getAccountNumber() {
         return accountNumber;
     }
 
-    public void setAccountNumber(Double accountNumble) {
-        this.firstName = accountNumber;
+    public void setAccountNumber(String accountNumber) {
+        this.accountNumber = accountNumber;
     }
+
+    public double getBalance() {
+        return balance;
+    }
+
+    public void setBalance(double balance) {
+        this.balance = balance;
+    }
+
     
 
     public int getId() {
@@ -62,6 +79,10 @@ public class CompteBancaire implements Serializable {
     public void setId(int id) {
         this.id = id;
     }
+    
+    
+    
+    
 
     @Override
     public int hashCode() {
@@ -69,6 +90,8 @@ public class CompteBancaire implements Serializable {
         hash += (int) id;
         return hash;
     }
+    
+    
 
     @Override
     public boolean equals(Object object) {
